@@ -5,12 +5,13 @@ import { getGreetings } from '../redux/greetings/greeting';
 
 const Greeting = () => {
   const dispatch = useDispatch();
-  const greeting= useSelector((state) => state.greeting);
+  const greeting = useSelector((state) => state.greeting);
 
   return (
     <div>
       Greeting:
       <button
+        type="button"
         className="getGreetingsBtn"
         onClick={() => dispatch(getGreetings())}
       >

@@ -3,15 +3,16 @@ const GET_GREETINGS_SUCCESS = 'GET_GREETINGS_SUCCESS';
 const URL = 'http://localhost:3000/v1/greetings';
 
 const initialState = {
-      id: 'Zeeze',
-      greeting: 'Hey',
+  id: 'Zeeze',
+  greeting: 'Hey',
 };
 
 export function getGreetingsSuccess(payload) {
   return {
     type: GET_GREETINGS_SUCCESS,
     payload,
-  }}
+  };
+}
 
 export const getGreetings = () => async (dispatch) => {
   await fetch(URL)
